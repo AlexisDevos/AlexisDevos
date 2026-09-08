@@ -16,9 +16,9 @@ Founder & CTO of [Astrée](https://astree.online), a document-intelligence produ
 | Project | What it demonstrates |
 | --- | --- |
 | [Astrée case study](https://github.com/AlexisDevos/astree-case-study) | Production SaaS architecture, document intelligence, security and operations |
-| [ElevateMCP](https://github.com/AlexisDevos/ElevateMCP) | A compact gateway bundling MCP tools for coding agents |
 | [dsh-remote-vps](https://github.com/AlexisDevos/dsh-remote-vps) | Rust agent, SSH confinement, gRPC, systemd hardening and atomic file operations |
-| [ElevateDesign](https://github.com/AlexisDevos/ElevateDesign) | Agentic product design, live preview and portable design systems |
+
+Additional client and product work is available privately on request.
 
 ## Technical focus
 
