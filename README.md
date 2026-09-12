@@ -17,8 +17,15 @@ Founder & CTO of [Astrée](https://astree.online), a document-intelligence produ
 | --- | --- |
 | [Astrée case study](https://github.com/AlexisDevos/astree-case-study) | Production SaaS architecture, document intelligence, security and operations |
 | [dsh-remote-vps](https://github.com/AlexisDevos/dsh-remote-vps) | Rust agent, SSH confinement, gRPC, systemd hardening and atomic file operations |
+| [Grok Bot — VPS sandbox & test suite](https://github.com/AlexisDevos/grok-bot-0.18-reconstructed) | Electron/host boundaries, remote sandbox connector, credential lifecycle, 71/71 deterministic tests on a reconstruction by [@b-nnett](https://github.com/b-nnett) |
 
-Additional client and product work is available privately on request.
+## Open-source engineering
+
+Work on other people's runtimes, where the bar is someone else's review:
+
+- **[T3 Code #7331](https://github.com/pingdotgg/t3code/issues/7331)** — DeepSeek Harness provider integration: driver, adapter, JSON-RPC runtime, streaming, model discovery and headless generation.
+- **[DeepSeek Harness #2888](https://github.com/deepseek-ai/deepseek-harness/discussions/2888)** — SDK wire lifecycle: `session/cancel` and `session/close`, 107/107 tests, lint and typecheck green.
+- **[Command Code #371](https://github.com/CommandCodeAI/command-code/issues/371)** — Diagnosed an MCP process leak: orphaned Python processes accumulating across sessions to 60 processes and 1.52 GB, traced to `detached: true` + `.unref()`.
 
 ## Technical focus
 
