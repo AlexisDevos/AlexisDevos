@@ -1,23 +1,31 @@
 # Alexis Devos
 
-**Lead Product Engineer & Fractional CTO** — I design and ship production-grade SaaS and AI systems, from product architecture to security, infrastructure and operations.
+**Product engineer building AI agents that hold up in production** — connected to real tools and real data, measured by evals, watched by monitoring, and kept in check by human approval.
 
-Founder & CTO of [Astrée](https://astree.online), a document-intelligence product. Based in Paris; available for focused product, architecture and AI delivery missions.
+Founder & CTO of [Astrée](https://astree.online), a document-intelligence product for law firms, in production. Based in Paris. **Open to a full-time role building and operating AI agents** (Paris or remote), as well as focused missions.
 
 ## What I do
 
-- Build full-stack products with TypeScript, Next.js, React, PostgreSQL and cloud services.
-- Integrate AI into reliable workflows: document processing, agents, retrieval and human review.
-- Turn prototypes into production systems: authentication, billing, queues, observability, testing and secure data isolation.
-- Review architecture, unblock delivery and establish pragmatic engineering standards.
+- Build agents and the connectors they need: mailboxes, cloud drives, calendars, legal databases, MCP servers.
+- Make them reliable: idempotent background jobs, prompt regression evals, prompt-injection defenses, approval gates, deterministic tests.
+- Monitor them: error tracking, Prometheus metrics, centralized logs, LLM cost and budget tracking.
+- Ship the whole product around them with TypeScript, Python, Rust, PostgreSQL and Redis, and talk with the people who use it.
 
-## Selected work
+## AI agents in production
 
 | Project | What it demonstrates |
 | --- | --- |
-| [Astrée case study](https://github.com/AlexisDevos/astree-case-study) | Production SaaS architecture, document intelligence, security and operations |
+| [Astrée](https://github.com/AlexisDevos/astree-case-study) (case study) | Gmail triage, Google Drive import (OAuth and push webhooks), deadline extraction to calendar, legal watch and a morning briefing, run as about twenty BullMQ job types. 10 promptfoo regression suites, including prompt injection through documents and RAG citation grounding. Sentry with PII scrubbing, a Prometheus endpoint, and logs and Redis/BullMQ metrics shipped to Grafana through Alloy |
+| Astrée Agent *(private, walkthrough on request)* | An always-on legal agent in Rust, about 650 tests: the model proposes, a gateway decides. Approvals are bound to the exact action, single-use and expire after 15 minutes; an incoming email is data, never an order. 14 ADRs and a threat model |
+| Legal AI Copilot *(private, walkthrough on request)* | Python/FastAPI backend that runs agent processes in a health-checked pool and stops a session once its LLM cost crosses a limit (Redis circuit breaker), with PostgreSQL row-level security, Alembic migrations, scheduled skills, pytest, and an MCP server for the Légifrance API |
+| ElevateMCP *(private, walkthrough on request)* | A dozen Python MCP servers behind one gateway process (git, SQL, secret scanning, semantic search, test running), which stay up and report a missing binary instead of crashing the agent |
+
+## Other selected work
+
+| Project | What it demonstrates |
+| --- | --- |
 | [dsh-remote-vps](https://github.com/AlexisDevos/dsh-remote-vps) | Rust agent, SSH confinement, gRPC, systemd hardening and atomic file operations |
-| [Grok Bot — VPS sandbox & test suite](https://github.com/AlexisDevos/grok-bot-0.18-reconstructed) | Electron/host boundaries, remote sandbox connector, credential lifecycle, 71/71 deterministic tests on a reconstruction by [@b-nnett](https://github.com/b-nnett) |
+| [Grok Bot — VPS sandbox & test suite](https://github.com/AlexisDevos/grok-bot-0.18-reconstructed) | Electron/host boundaries, remote sandbox connector, credential lifecycle, 69/69 deterministic tests on a reconstruction by [@b-nnett](https://github.com/b-nnett) |
 
 ## Open-source engineering
 
@@ -29,11 +37,11 @@ Work on other people's runtimes, where the bar is someone else's review:
 
 ## Technical focus
 
-`TypeScript` · `Next.js` · `React` · `Node.js` · `Python` · `Rust` · `PostgreSQL` · `Redis/BullMQ` · `AI SDKs` · `MCP` · `Docker` · `CI/CD` · `security`
+`TypeScript` · `Python` · `Rust` · `Next.js` · `FastAPI` · `PostgreSQL` · `Redis/BullMQ` · `AI SDKs` · `MCP` · `promptfoo` · `Sentry` · `Grafana` · `Docker` · `CI/CD` · `security`
 
 ## Contact
 
 - Website: [astree.online](https://astree.online)
 - LinkedIn: [alexis4astree](https://www.linkedin.com/in/alexis4astree/)
 
-For a product build, architecture review or fractional CTO engagement, [send me a message](https://www.linkedin.com/in/alexis4astree/).
+For a full-time role on AI agents, a product build or an architecture review, [send me a message](https://www.linkedin.com/in/alexis4astree/).
