@@ -11,12 +11,12 @@ Founder & CTO of [Astrée](https://astree.online), a document-intelligence produ
 - Monitor them: error tracking, Prometheus metrics, centralized logs, LLM cost and budget tracking.
 - Ship the whole product around them with TypeScript, Python, Rust, PostgreSQL and Redis, and talk with the people who use it.
 
-## AI agents in production
+## AI agents
 
 | Project | What it demonstrates |
 | --- | --- |
-| [Astrée](https://github.com/AlexisDevos/astree-case-study) (case study) | Gmail triage, Google Drive import (OAuth and push webhooks), deadline extraction to calendar, legal watch and a morning briefing, run as about twenty BullMQ job types. 10 promptfoo regression suites, including prompt injection through documents and RAG citation grounding. Sentry with PII scrubbing, a Prometheus endpoint, and logs and Redis/BullMQ metrics shipped to Grafana through Alloy |
-| Astrée Agent *(private, walkthrough on request)* | An always-on legal agent in Rust, about 650 tests: the model proposes, a gateway decides. Approvals are bound to the exact action, single-use and expire after 15 minutes; an incoming email is data, never an order. 14 ADRs and a threat model |
+| [Astrée](https://github.com/AlexisDevos/astree-case-study), in production | Gmail triage, Google Drive import (OAuth and push webhooks), deadline extraction to calendar, legal watch and a morning briefing, run as about twenty BullMQ job types. 10 promptfoo regression suites, including prompt injection through documents and RAG citation grounding. Sentry with PII scrubbing, a Prometheus endpoint, and logs and Redis/BullMQ metrics shipped to Grafana through Alloy |
+| [Astrée Agent](https://github.com/AlexisDevos/astree-agent-case-study), prototype | An always-on legal agent in Rust, about 110,000 lines and nearly 800 tests: the model proposes, a gateway decides. Approvals are bound to the exact action, single-use and expire after 15 minutes; an incoming email is data, never an order. Proof tests with trapped emails, evals on a synthetic law firm, 15 ADRs |
 | Legal AI Copilot *(private, walkthrough on request)* | Python/FastAPI backend that runs agent processes in a health-checked pool and stops a session once its LLM cost crosses a limit (Redis circuit breaker), with PostgreSQL row-level security, Alembic migrations, scheduled skills, pytest, and an MCP server for the Légifrance API |
 | ElevateMCP *(private, walkthrough on request)* | A dozen Python MCP servers behind one gateway process (git, SQL, secret scanning, semantic search, test running), which stay up and report a missing binary instead of crashing the agent |
 
